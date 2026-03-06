@@ -1,36 +1,41 @@
 package bank.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Transaction {
-    private String type;
-    private double amount;
-    private String description;
-    private LocalDateTime date = LocalDateTime.now();
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    public Transaction (String type, Double amount, String description){
-    this.type = type;
-    this.amount = amount;
-    this.description = description;
+    private final String type;
+    private final double amount;
+    private final String description;
+    private final LocalDateTime date;
+
+    public Transaction(String type, double amount, String description) {
+        this.type = type;
+        this.amount = amount;
+        this.description = description;
+        this.date = LocalDateTime.now();
     }
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 
-    public double getAmount(){
+    public double getAmount() {
         return amount;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
-    public LocalDateTime getCurrentDate(){
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public String toString(String type, Double amount, String desciption, LocalDateTime date){
-        return type + " | " + amount + " EUR | " + date + " | " + description;
+    @Override
+    public String toString() {
+        return type + " | " + String.format("%.2f", amount) + " EUR | " + date.format(FORMATTER) + " | " + description;
     }
 }
