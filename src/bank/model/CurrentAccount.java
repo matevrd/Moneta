@@ -6,7 +6,7 @@ public class CurrentAccount extends BaseAccount {
     }
 
     @Override
-    public String getAccountType() {
-        return "CURRENT";
+    public AccountType getAccountType() {
+        return AccountType.CURRENT;
     }
 }

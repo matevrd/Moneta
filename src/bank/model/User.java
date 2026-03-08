@@ -5,19 +5,19 @@ import java.util.Collections;
 import java.util.List;
 
 public class User {
-    private final String firstName;
-    private final String lastName;
-    private final String birthday;
-    private final String address;
+    private String firstName;
+    private String lastName;
+    private String birthday;
+    private String address;
     private final String username;
     private final String password;
     private final List<Account> accounts = new ArrayList<>();
 
-    public User(String firstName, String lastName, String birthday, String address, String username, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthday = birthday;
-        this.address = address;
+    public User(String username, String password) {
+        this.firstName = "";
+        this.lastName = "";
+        this.birthday = "";
+        this.address = "";
         this.username = username;
         this.password = password;
     }
@@ -30,16 +30,32 @@ public class User {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getBirthday() {
         return birthday;
     }
 
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
     public String getAddress() {
         return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getUsername() {

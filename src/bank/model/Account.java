@@ -8,7 +8,6 @@ public interface Account {
     double getBalance();
     String getAccountNumber();
     String getOwnerName();
-    String getAccountType();
+    AccountType getAccountType();
     List<Transaction> getTransactions();
-    void printTransactions();
 }

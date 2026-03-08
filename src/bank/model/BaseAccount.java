@@ -26,7 +26,7 @@ public abstract class BaseAccount implements Account {
             throw new IllegalArgumentException("Einzahlungsbetrag muss positiv sein.");
         }
         this.balance += amount;
-        transactions.add(new Transaction("DEPOSIT", amount, String.format("Einzahlung: %.2f EUR", amount)));
+        transactions.add(new Transaction(TransactionType.DEPOSIT, amount, String.format("Einzahlung: %.2f EUR", amount)));
     }
 
     @Override
@@ -43,7 +43,7 @@ public abstract class BaseAccount implements Account {
                     balance, amount, amount - balance));
         }
         this.balance -= amount;
-        transactions.add(new Transaction("WITHDRAWAL", amount, String.format("Abhebung: %.2f EUR", amount)));
+        transactions.add(new Transaction(TransactionType.WITHDRAWAL, amount, String.format("Abhebung: %.2f EUR", amount)));
     }
 
     @Override
@@ -64,12 +64,5 @@ public abstract class BaseAccount implements Account {
     @Override
     public List<Transaction> getTransactions() {
         return Collections.unmodifiableList(transactions);
-    }
-
-    @Override
-    public void printTransactions() {
-        for (Transaction t : transactions) {
-            System.out.println(t);
-        }
     }
 }

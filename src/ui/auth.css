@@ -1,0 +1,222 @@
+.auth-field {
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+  -fx-padding: 8;
+}
+
+.dark .auth-field {
+  -fx-background-color: #2a2a2a;
+  -fx-text-fill: white;
+  -fx-border-color: #444;
+}
+
+.light .auth-field {
+  -fx-background-color: white;
+  -fx-border-color: #ccc;
+}
+
+.auth-btn {
+  -fx-font-weight: bold;
+  -fx-background-radius: 6;
+  -fx-padding: 10 40;
+}
+
+.dark .auth-btn {
+  -fx-background-color: white;
+  -fx-text-fill: #1a1a1a;
+}
+
+.light .auth-btn {
+  -fx-background-color: #1a1a1a;
+  -fx-text-fill: white;
+}
+
+.error-label {
+  -fx-font-size: 12px;
+}
+
+.dark .error-label {
+  -fx-text-fill: #ff6b6b;
+}
+
+.light .error-label {
+  -fx-text-fill: #cc0000;
+}
+
+.muted-label {
+  -fx-font-size: 12px;
+}
+
+.dark .muted-label {
+  -fx-text-fill: rgba(255, 255, 255, 0.45);
+}
+
+.light .muted-label {
+  -fx-text-fill: rgba(0, 0, 0, 0.4);
+}
+
+.link-label {
+  -fx-font-size: 12px;
+  -fx-font-style: italic;
+  -fx-font-weight: bold;
+  -fx-cursor: hand;
+  -fx-underline: true;
+}
+
+.dark .link-label {
+  -fx-text-fill: white;
+}
+
+.light .link-label {
+  -fx-text-fill: #1a1a1a;
+}
+
+.dark .link-label:hover {
+  -fx-text-fill: #aaaaaa;
+}
+
+.light .link-label:hover {
+  -fx-text-fill: #555555;
+}
+
+/* ── Account selector ────────────────────────────────────── */
+.selector-title {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-padding: 0 0 8 0;
+}
+
+.dark .selector-title {
+  -fx-text-fill: rgba(255, 255, 255, 0.85);
+}
+
+.light .selector-title {
+  -fx-text-fill: rgba(0, 0, 0, 0.8);
+}
+
+.account-card {
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+  -fx-border-width: 1;
+  -fx-cursor: hand;
+}
+
+.dark .account-card {
+  -fx-background-color: #2a2a2a;
+  -fx-border-color: #3a3a3a;
+}
+
+.light .account-card {
+  -fx-background-color: white;
+  -fx-border-color: #ddd;
+}
+
+.dark .account-card:hover {
+  -fx-background-color: #333333;
+  -fx-border-color: #555;
+}
+
+.light .account-card:hover {
+  -fx-background-color: #f5f5f5;
+  -fx-border-color: #bbb;
+}
+
+.card-type {
+  -fx-font-size: 13px;
+  -fx-font-weight: bold;
+}
+
+.dark .card-type {
+  -fx-text-fill: white;
+}
+
+.light .card-type {
+  -fx-text-fill: #1a1a1a;
+}
+
+.card-number {
+  -fx-font-size: 11px;
+}
+
+.dark .card-number {
+  -fx-text-fill: rgba(255, 255, 255, 0.4);
+}
+
+.light .card-number {
+  -fx-text-fill: rgba(0, 0, 0, 0.35);
+}
+
+.card-balance {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+}
+
+.dark .card-balance {
+  -fx-text-fill: white;
+}
+
+.light .card-balance {
+  -fx-text-fill: #1a1a1a;
+}
+
+/* ── New account type toggle ─────────────────────────────── */
+.type-btn {
+  -fx-background-radius: 6;
+  -fx-border-radius: 6;
+  -fx-border-width: 1;
+  -fx-padding: 8 20;
+  -fx-cursor: hand;
+  -fx-font-size: 13px;
+}
+
+.dark .type-btn {
+  -fx-background-color: transparent;
+  -fx-border-color: #444;
+  -fx-text-fill: rgba(255, 255, 255, 0.5);
+}
+
+.light .type-btn {
+  -fx-background-color: transparent;
+  -fx-border-color: #ccc;
+  -fx-text-fill: rgba(0, 0, 0, 0.45);
+}
+
+.dark .type-btn.type-btn-selected {
+  -fx-background-color: white;
+  -fx-border-color: white;
+  -fx-text-fill: #1a1a1a;
+  -fx-font-weight: bold;
+}
+
+.light .type-btn.type-btn-selected {
+  -fx-background-color: #1a1a1a;
+  -fx-border-color: #1a1a1a;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.toast {
+  -fx-background-color: rgba(20, 20, 20, 0.88);
+  -fx-background-radius: 20;
+  -fx-padding: 9 22 9 18;
+  -fx-border-color: rgba(255, 255, 255, 0.07);
+  -fx-border-radius: 20;
+  -fx-border-width: 1;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.28), 18, 0, 0, 5);
+}
+
+.toast-check {
+  -fx-text-fill: #66bb6a;
+  -fx-font-size: 13px;
+  -fx-font-weight: bold;
+}
+
+.toast-divider {
+  -fx-background-color: rgba(102, 187, 106, 0.5);
+  -fx-background-radius: 1;
+}
+
+.toast-msg {
+  -fx-text-fill: rgba(255, 255, 255, 0.85);
+  -fx-font-size: 13px;
+}

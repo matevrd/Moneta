@@ -12,8 +12,8 @@ public class SavingsAccount extends BaseAccount {
     }
 
     @Override
-    public String getAccountType() {
-        return "SAVINGS";
+    public AccountType getAccountType() {
+        return AccountType.SAVINGS;
     }
 
     public double getInterestRate() {
