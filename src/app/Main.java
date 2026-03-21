@@ -1,5 +1,6 @@
 package app;
 
+import bank.repository.DatabaseManager;
 import bank.service.BankService;
 import javafx.application.Application;
 import javafx.application.ColorScheme;
@@ -20,6 +21,11 @@ import ui.RegisterView;
 import utils.ImageUtils;
 
 public class Main extends Application {
+
+    @Override
+    public void init() throws Exception{
+        DatabaseManager.initialize();
+    }
 
     @Override
     public void start(Stage stage) {

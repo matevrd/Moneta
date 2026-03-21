@@ -79,7 +79,7 @@ public class AppNavigator {
     }
 
     private void showProfileSetup(User user, AccountSelectorView selector) {
-        ProfileSetupView profile = new ProfileSetupView(isDark, user);
+        ProfileSetupView profile = new ProfileSetupView(isDark, user, bankService);
         profile.setOpacity(0);
         profile.bindToScene(scene);
         anim.switchInWrapper(anim.getSelectorWrapper(), selector, profile);

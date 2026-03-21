@@ -3,8 +3,8 @@ package bank.model;
 public class SavingsAccount extends BaseAccount {
     private final double interestRate;
 
-    public SavingsAccount(double balance, String accountNumber, String ownerName, double interestRate) {
-        super(balance, accountNumber, ownerName);
+    public SavingsAccount(double balance, String accountNumber, int userID, double interestRate) {
+        super(balance, accountNumber, userID);
         if (interestRate < 0) {
             throw new IllegalArgumentException("Zinssatz darf nicht negativ sein.");
         }

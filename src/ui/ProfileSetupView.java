@@ -1,6 +1,7 @@
 package ui;
 
 import bank.model.User;
+import bank.service.BankService;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -15,9 +16,11 @@ public class ProfileSetupView extends BaseView {
     private final TextField birthdayField;
     private final TextField addressField;
     private Runnable onComplete;
+    private final BankService bankService;
 
-    public ProfileSetupView(boolean isDark, User user) {
+    public ProfileSetupView(boolean isDark, User user, BankService bankService) {
         super(isDark, 9, new Insets(0, 40, 12, 40));
+        this.bankService = bankService;
 
         subtitle = new Label("Profil vervollständigen");
         subtitle.setMaxWidth(MAX_FIELD_WIDTH);
@@ -58,6 +61,7 @@ public class ProfileSetupView extends BaseView {
             user.setLastName(ln);
             user.setBirthday(bd);
             user.setAddress(addr);
+            bankService.updateProfile(user);
             if (onComplete != null) onComplete.run();
         });
 
@@ -67,7 +71,7 @@ public class ProfileSetupView extends BaseView {
 
     public void setOnComplete(Runnable r) { this.onComplete = r; }
 
-public void bindToScene(Scene scene) {
-    bindNodeWidths(scene, subtitle, firstNameField, lastNameField, birthdayField, addressField);
-}
+    public void bindToScene(Scene scene) {
+        bindNodeWidths(scene, subtitle, firstNameField, lastNameField, birthdayField, addressField);
+    }
 }

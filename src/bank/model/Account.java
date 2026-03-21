@@ -7,7 +7,7 @@ public interface Account {
     void withdraw(double amount);
     double getBalance();
     String getAccountNumber();
-    String getOwnerName();
+    int getUserID();
     AccountType getAccountType();
     List<Transaction> getTransactions();
 }

@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class User {
+    private final int ID;
     private String firstName;
     private String lastName;
     private String birthday;
@@ -13,7 +14,8 @@ public class User {
     private final String password;
     private final List<Account> accounts = new ArrayList<>();
 
-    public User(String username, String password) {
+    public User(int ID, String username, String password) {
+        this.ID = ID;
         this.firstName = "";
         this.lastName = "";
         this.birthday = "";
@@ -68,5 +70,9 @@ public class User {
 
     public List<Account> getAccounts() {
         return Collections.unmodifiableList(accounts);
+    }
+
+    public int getID() {
+    return ID;
     }
 }

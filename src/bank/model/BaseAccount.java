@@ -8,16 +8,16 @@ import java.util.List;
 public abstract class BaseAccount implements Account {
     private double balance;
     private final String accountNumber;
-    private final String ownerName;
+    private final int userID;
     private final List<Transaction> transactions = new ArrayList<>();
 
-    public BaseAccount(double balance, String accountNumber, String ownerName) {
+    public BaseAccount(double balance, String accountNumber, int userID) {
         if (balance < 0) {
             throw new IllegalArgumentException("Anfangssaldo darf nicht negativ sein.");
         }
         this.balance = balance;
         this.accountNumber = accountNumber;
-        this.ownerName = ownerName;
+        this.userID = userID;
     }
 
     @Override
@@ -57,8 +57,8 @@ public abstract class BaseAccount implements Account {
     }
 
     @Override
-    public String getOwnerName() {
-        return ownerName;
+    public int getUserID() {
+        return userID;
     }
 
     @Override

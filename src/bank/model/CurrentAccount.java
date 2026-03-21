@@ -1,8 +1,8 @@
 package bank.model;
 
 public class CurrentAccount extends BaseAccount {
-    public CurrentAccount(double balance, String accountNumber, String ownerName) {
-        super(balance, accountNumber, ownerName);
+    public CurrentAccount(double balance, String accountNumber, int userID) {
+        super(balance, accountNumber, userID);
     }
 
     @Override
